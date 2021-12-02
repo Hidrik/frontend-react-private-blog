@@ -40,7 +40,7 @@ function App() {
                     <button onClick={() => {
                         toggleIsAuthenticated(false)
                         history.push('/')
-                    }}> Uitloggen </button>}
+                    }}  className='individual-navigation'> Uitloggen </button>}
             </nav>
             <Switch>
                 <Route exact path='/'>
