@@ -2,31 +2,36 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import posts from '../data/posts.json'
 
+class data {
+    constructor(post) {
+        this.id = post.id;
+        this.title = post.title;
+        this.date = post.date
+        this.content = post.content;
+    }
+}
+
 function Product() {
     const { id } = useParams();
-    let title = ""
-    let content = ""
-    let date = ""
+    let blogpostContent
 
 
     for (let i=0; i < posts.length; i++) {
         if (posts[i].id === id) {
-            title = posts[i].title
-            date = posts[i].date
-            content = posts[i].content
+            blogpostContent = new data(posts[i])
         }
     }
 
-    return <>
 
+    return <>
         <h1>
-            {title}
+            {blogpostContent.title}
         </h1>
         <p>
-            {content}
+            {blogpostContent.date}
         </p>
         <p>
-            {date}
+            {blogpostContent.content}
         </p>
     </>
 }

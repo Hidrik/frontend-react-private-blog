@@ -21,19 +21,19 @@ function App() {
     }
 
     return (<>
-            <nav>
-                <NavLink to='/'>
+            <nav className='navigation'>
+                <NavLink to='/' className='individual-navigation'>
                     Homepagina
                 </NavLink>
                 {isAuthenticated ?
-                    <NavLink to='/BlogPosts'>
+                    <NavLink to='/BlogPosts' className='individual-navigation'>
                         Blogposts
                     </NavLink>
                 :''}
 
                 {!isAuthenticated ?
 
-                    <NavLink to='/LoginPage'>
+                    <NavLink to='/LoginPage' className='individual-navigation'>
                         login pagina
                     </NavLink>
                     :
