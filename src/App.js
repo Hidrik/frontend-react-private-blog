@@ -46,7 +46,6 @@ function App() {
                 <Route exact path='/'>
                     <HomePage/>
                 </Route>
-
                 <Route exact path='/BlogPosts'>
                     <BlogPosts postCount={getTotalBlogpostsCount(posts)} posts={posts}/>
                 </Route>
