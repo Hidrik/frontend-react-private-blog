@@ -9,7 +9,7 @@ function BlogPosts({postCount, posts}) {
         <ul>
             {posts.map(post => {
                     return <>
-                        <li>
+                        <li key={post.id}>
                             <Link to={`/product/${post.id}`} classname='blog-link'> {post.title}</Link>
                         </li>
                     </>
